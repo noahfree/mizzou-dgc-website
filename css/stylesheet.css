@@ -1,0 +1,787 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    overflow-x: hidden;
+}
+
+.body {
+    width: 100%;
+    background-image: url(../images/home/photo1.jpg);
+    background-size: cover;
+}
+
+#layout1 {
+    z-index: 3;
+    width: 100%;
+    height: 25px;
+    background-color: #222831;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#layout2 {
+    z-index: 1;
+    width: 100%;
+    min-height: 70px;
+    
+    background-color: #393e46;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 5px 8px #696969;
+}
+
+#content1 {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+}
+
+#content2 {
+    width: 100%;
+}
+
+#content4 {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#content5 {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 500px;
+    background-color: #fff;
+}
+
+#layout4 {
+    width: 100%;
+    background-color: #4d4f53;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+#layout5 {
+    width: 100%;
+    background-color: #222831;
+    color: #ffffff;
+    padding: 75px 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login {
+    cursor: move;
+    width: 370px;
+    height: 400px;
+    position: fixed;
+    top: 120px;
+    z-index: 4;
+    overflow-y: hidden;
+    background-color: #fff;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+    box-shadow: 0 10px 20px #000;
+}
+
+/* Effects: */
+.blur { /* code for this effect taken from https://blog.prototypr.io/how-to-make-a-background-blur-in-css-with-one-line-of-code-e446c7236e60 */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    width: 100%;
+}
+
+/* method of highlighting the current page taken from https://css-tricks.com/including-navigation-code-on-all-pages-even-with-current-navigation-highlighting */
+#homePage .home, #historyPage .history, #teamPage .team, #newsPage .news, #coursesPage .courses {
+    color: #b8860b;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.burger .line1, .line2, .line3 {
+    height: 2px;
+    width: 30px;
+    margin: 7px 0;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Images: */
+#content1 img {
+    height: 30em;
+}
+
+#content3 img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#content4 img {
+    width: 400px;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 8px 8px 0 #fff;
+}
+
+/* Specific Items: */
+#layout1 p {
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 2.5px;
+    margin-right: 50px;
+    cursor: pointer;
+    display: none;
+    text-decoration: underline;
+}
+
+#layout1 p:hover {
+    text-decoration: none;
+}
+
+#layout2 h2, .mobile h2 {
+    color: #f8f8ff;
+    font-family: 'Balthazar', serif;
+    font-size: 32px;
+    font-weight: 200;
+    margin: 10px;
+    cursor: default;
+}
+
+.mobile h2 {
+    border-bottom: 2px solid #f8f8ff;
+    padding-bottom: 8px;
+}
+
+#layout2 div.items p, .mobile p {
+    font-size: 13px;
+    letter-spacing: 5.5px;
+    text-transform: uppercase;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#layout2 a:hover, .mobile a:hover, .contact:hover {
+    color: #b8860b;
+    text-decoration: underline;
+    -webkit-transition: color linear .2s;
+	   -moz-transition: color linear .2s;
+	     -o-transition: color linear .2s;
+	        transition: color linear .2s;
+}
+
+#layout2 a, .mobile a, .contact {
+    color: #f8f8ff;
+    text-decoration: none;
+}
+
+.mobile {
+    display: none;
+}
+
+#layout2 .tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#layout2 .tablet .items {
+    width: 100%;
+    display: none;
+    margin-bottom: 12px;
+    justify-content: space-evenly;
+}
+
+#layout2 .tablet .items p {
+    font-size: 12px;
+    letter-spacing: 3.5px;
+}
+
+#layout2 .tablet a {
+    margin: 8px;
+}
+
+#layout2 div.items {
+    width: 28%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.body .blur {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.body .arrow {
+    height: 70px;
+    margin: 25px;
+    cursor: pointer;
+}
+
+#content2 iframe {
+    display: block;
+    margin: 30px auto 20px auto;
+}
+
+#content2 h5 {
+    width: 70%;
+    text-align: center;
+    margin: 20px 15%;
+    font-weight: 300;
+}
+
+#content3 h1 {
+    width: 100%;
+    margin: 50px 0; 
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+#content3 div div div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #222831;
+}
+
+#content3 span {
+    font-size: 18px;
+    font-family: 'Cinzel', serif;
+}
+
+#content3 a {
+    color: #000;
+}
+
+#content3 a:hover {
+    color: #b8860b;
+    -webkit-transition: color linear .2s;
+	   -moz-transition: color linear .2s;
+	     -o-transition: color linear .2s;
+	        transition: color linear .2s;
+}
+
+#content4 .wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#content4 #image {
+    min-width: 400px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+#content4 p {
+    font-family: 'Balthazar', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 0 20px;
+    width: 380px;
+    text-align: justify;
+}
+
+#content4 #date {
+    width: 400px;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+.newsBody {
+    width: 100%;
+}
+
+#content4 .navigation {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10% 10px 10%;
+}
+
+#content4 .arrow {
+    height: 40px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.newsBody .container {
+    display: flex;
+    align-items: center;
+}
+
+#teamGrid {
+    width: 80%;
+    margin: 0 auto 70px auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "area1 area2"
+        "area3 area4";
+    column-gap: 90px;
+    row-gap: 70px;
+}
+
+#teamGrid .profile1 {
+    grid-area: area1;
+}
+
+#teamGrid .profile2 {
+    grid-area: area2;
+}
+
+#teamGrid .profile3 {
+    grid-area: area3;
+}
+
+#teamGrid .profile4 {
+    grid-area: area4;
+}
+
+#content5 h1 {
+    width: 100%;
+    margin: 50px 0 20px 0;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    text-decoration: underline;
+}
+
+#content5 .loginMessage {
+    font-size: 20px;
+    padding: 5px;
+    color: #8b0000;
+    background-color: #ff9fb0;
+    border: 2px solid #8b0000;
+}
+
+#content5 .messageWrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#content5 .wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+#content5 .courseWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2.5px solid #000;
+}
+
+#content5 h2 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+#content5 h4 {
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 10px
+}
+
+#content5 .terrain {
+    text-align: center;
+    margin: 5px 0 0 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#content5 span {
+    margin: 10px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+#content5 .courseWrapper img {
+    height: 150px;
+    float: left;
+    margin: 0 10px 10px 0;
+    border-radius: 0.5px;
+    box-shadow: 0 2px 4px #606060;
+}
+
+#layout4 h3 {
+    margin: 30px 10% 10px 10%;
+    font-size: 30px;
+}
+
+#layout4 .pContainer {
+    display: flex;
+    align-items: center;
+}
+
+#layout4 p {
+    margin: 0 5% 0 10%;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px;
+    border-top: 2px solid #4d4f53;
+    border-bottom: 2px solid #4d4f53;
+}
+
+#layout4 #response {
+    margin: 0 10% 0 5%;
+    padding: 5px;
+    width: 25%;
+}
+
+#layout4 form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:35px 20% 30px 10%;
+}
+
+#layout4 form div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#layout4 label {
+    margin-bottom: 5px;
+}
+
+#layout4 div input {
+    padding: 10px 18px;
+    width: 225px;
+}
+
+#layout4 #signUp {
+    height: 45px;
+    margin-left: 11%;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #4d4f53;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+}
+
+#layout4 #signUp:hover {
+    color: #222832;
+    border-color: #222832;
+}
+
+#layout5 h3 {
+    margin: 30px 10% 10px 10%;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#layout5 p {
+    margin: 0 10% 50px 10%;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+    border-bottom: 2px solid #fff;
+}
+
+#layout5 div {
+    margin: 20px 10%;
+    display: flex;
+}
+
+#layout5 h5 {
+    font-size: 18px;
+    width: 150px;
+    font-weight: 500;
+}
+
+#layout5 h6 {
+    font-size: 15px;
+}
+
+#layout5 a {
+    color: #fff;
+}
+
+#layout5 a:hover {
+    color: #b8860b;
+    text-decoration: none;
+    cursor: alias;
+    -webkit-transition: color linear .2s;
+	   -moz-transition: color linear .2s;
+	     -o-transition: color linear .2s;
+	        transition: color linear .2s;
+}
+
+#login h3 {
+    font-size: 32px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+#login div {
+    width: 100%;
+}
+
+#login input {
+    width: 100%;
+    padding: 15px;
+    margin: 18px 0;
+}
+
+#login button {
+    width: 100%;
+    background-color: #fff;
+    border: 2.5px solid #000;
+    padding: 10px;
+    margin: 18px 0 0 0;
+    cursor: pointer;
+}
+
+#login img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1040px){
+    #layout2 div.items {
+        display: none;
+    }
+    
+    #layout2 .tablet .items {
+        display: flex;
+    }
+    
+    #content4 .wrapper {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    #content5 .terrain {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 950px){
+    #content1 img {
+        height: 25em;
+    }
+    
+    #teamGrid {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #content2 iframe {
+        width: 400px;
+        height: 225px;
+    }
+}
+
+@media screen and (max-width: 830px){
+    #layout4 h3 {
+        font-size: 22px;
+    }
+    
+    #layout4 form {
+        margin-right: 20%;
+    }
+    
+    #layout4 form input {
+        padding: 5px 9px;
+    }
+    
+    #layout4 button#signUp {
+        padding: 5px 9px;
+    }
+    
+    #layout5 h3 {
+        font-size: 22px;
+    }
+
+    #layout5 p {
+        font-size: 12px;
+    }
+
+    #layout5 h5 {
+        font-size: 16px;
+    }
+
+    #layout5 h6 {
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    #content1 img {
+        height: 50vw;
+    }
+    
+    #content2 iframe {
+        width: 80%;
+        height: 175px;
+    }
+    
+    #content4 #image {
+        min-width: 300px;
+        width: 300px;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+    }
+
+    #content4 #caption {
+        width: 95%;
+        padding: 0 2.5%;
+        font-size: 15px;
+    }
+    
+    #homePage .arrow {
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #layout4 h3 {
+        margin-left: 17%;
+    }
+    
+    #layout4 .pContainer {
+        width: 66%;
+        margin-right: 17%;
+        margin-left: 17%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #layout4 p {
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    #layout4 p#response {
+        width: 100%;
+        margin: 0;
+    }
+    
+    #layout4 form {
+        width: 70%;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+    
+    #layout4 form div {
+        width: 100%;
+    }
+    
+    #layout4 form input {
+        width: 100%;
+    }
+    
+    #layout4 button#signUp {
+        width: 66%;
+        margin-right: 17%;
+        margin-left: 17%;
+    }
+}
+
+@media screen and (max-width: 575px){
+    
+    #layout2 .tablet .items {
+        display: none;
+    }
+    
+    /* all code related to the responsive navbar learned from: https://www.youtube.com/watch?v=gXkqy0b4M5g */
+    .mobile {
+        z-index: 2;
+        position: fixed;
+        right: 0;
+        height: 100vh; /* 92vh; */
+        padding: 5vh 0 12vh 0;
+        width: 75%;
+        background-color: #393e46;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .mobile p {
+        opacity: 0;
+    }
+        
+    .burger {
+        display: block;
+    }
+    
+    #content5 .courseWrapper img {
+        width: 70%;
+        height: auto;
+        margin-left: 15%;
+        margin-right: 15%;
+        float: none;
+    }
+}
+
+/* all code related to the responsive navbar learned from: https://www.youtube.com/watch?v=gXkqy0b4M5g */
+.mobile-active {
+    transform: translateX(0%);
+}
+
+@keyframes navItemFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.burgerLine1-active {
+    transform: rotate(-45deg) translate(-5px, 7.5px);
+}
+.burgerLine2-active {
+    opacity: 0;
+}
+.burgerLine3-active {
+    transform: rotate(45deg) translate(-5px, -7.5px);
+}
