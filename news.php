@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
-<html>
-<head lang="en">
-    <!--    meta for mobile view taken from: https://stackoverflow.com/questions/14304494/responsive-web-design-is-working-on-desktop-but-not-on-mobile-device-->
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <!-- meta for mobile view taken from: https://stackoverflow.com/questions/14304494/responsive-web-design-is-working-on-desktop-but-not-on-mobile-device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
     <title>News | Mizzou Disc Golf</title>
     
     <!-- External Stylesheet -->
